@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- link to Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <!-- Link to CSS and JS files -->
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+    <title>Shopping List</title>
+</head>
+<body>
+
+    <!-- Shopping List -->
+
+    <div id="shopping-list-container">
+        <h1>SHOPPING LIST</h1>
+
+        <!-- Section where the shopping list items will be added to -->
+         <form>
+            <input type="text" placeholder="Item. e.g. potatoes" id="item"/> x
+            <input type="text" placeholder="Quantity. e.g. 1" id="quantity"/>
+            <button id="bigger-btn" onclick="addItem(event)">Add</button>
+            <button id="smaller-btn" onclick="addItem(event)">+</button>
+
+        </form>
+
+        <!-- Section where items list will be displayed -->
+         <p id="shopping-list-display"></p>
+        <hr/>
+
+    </div>
+
+    <!-- Shopping Basket -->
+    <div id="shopping-basket-container">
+        <h1>SHOPPING BASKET</h1>
+        <p>Enter all the products you've put into your shopping basket, separated by commas, to see if you've forgotten anything</p>
+
+        <form action="">
+            <input type="text " id="shopping-basket" placeholder="e.g tomatoe,eggs,milk" />
+            <button onclick="addToBasket(event)">Add to Basket</button>
+        </form>
+
+        <!-- Items that still need to be added to basket will display (items left in shopping list) -->
+         <p id="items-still-to-buy-display"></p>
+
+
+    </div>
+
+
+</body>
+</html>

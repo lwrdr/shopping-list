@@ -1,0 +1,115 @@
+/* ===== Styling of general elements  ===== */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #1b1f23;
+    color: rgb(245, 245, 245);
+    font-family: "Montserrat", sans-serif;
+}
+
+h1 {
+    letter-spacing: 3px;
+    font-weight: 500;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+input {
+    background-color: #2c323a;
+    color: aliceblue;
+    border: none;
+    padding: 5px;
+    margin: 5px;
+    outline: none;
+}
+
+button {
+    font-family: inherit;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 50px;
+    background-color: rgb(37, 122, 206);
+    color: inherit;
+    box-shadow: rgba(23, 103, 225, 0.25) 0px 54px 55px, rgba(4, 94, 227, 0.12) 0px -12px 30px, rgba(3, 51, 123, 0.12) 0px 4px 6px, rgba(31, 113, 236, 0.17) 0px 12px 13px, rgba(7, 88, 211, 0.09) 0px -3px 5px;
+}
+
+hr {
+    border: none;
+    border-bottom: dotted 3px #514e4e;
+    margin: 20px;
+    width: 100%;
+    min-width: 400px;
+}
+
+/* ======== Shopping List and Basket sections ======== */
+#shopping-list-container, #shopping-basket-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 40%;
+    min-width: 400px;
+    text-align: center;
+}
+
+#shopping-list-display, #items-still-to-buy-display {
+    width: 100%;
+    margin: 0;
+}
+
+#smaller-btn {
+    display: none;
+}
+
+/* This is the styling of the list items when they are added to the list or basket */
+.shopping-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin: 10px 0px;
+    padding: 10px 20px;
+    border-radius: 3px;
+    background-color: #2c323a;
+    box-shadow: 0px 0px 22px rgba(156, 43, 226, 0.1);
+}
+
+.shopping-item p {
+    margin: 0;
+}
+
+.completedItem p{
+    color: rgb(129, 131, 132);
+    text-decoration: line-through;
+}
+
+.shopping-item span {
+    cursor: pointer;
+}
+
+
+/* ====== Media Query ====== */
+@media only screen and (max-width: 900px) {
+    /* When the screen size reduces the add item to list button will switch to a + button */
+    #bigger-btn {
+        display: none;
+    }
+
+    #smaller-btn {
+        display: inline;
+    }
+}
